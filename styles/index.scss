@@ -1,7 +1,6 @@
 header {
     background-color: $primary-color;
     menu{
-        width: 100%;
         max-width: 1080px;
         margin: 0 auto;
         display: flex;
@@ -80,8 +79,8 @@ header {
                 margin: 0;
             }
             ul.toggle-links {
-                position: absolute;
-                margin-top: 30px;
+                position: fixed;
+                right: 10px;
                 list-style: none;
                 margin: 0;
                 padding: 0;
