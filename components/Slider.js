@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 
 export default function Slider() {
     const slider = useRef(null);
-    slider.current && setTimeout(setInterval(slider.current.scrollLeft += slider.current.offsetWidth, 7000), 6000) 
+    slider.current && setInterval(slider.current.scrollLeft += slider.current.offsetWidth, 20000) 
     const [sliderButtonIsHidden, setSliderButtonIsHidden] = useState(true)
     return (
       <>
