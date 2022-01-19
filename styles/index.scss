@@ -7,14 +7,14 @@ header {
         justify-content: space-between;
         height: 56px;
         align-items: center;
-        color: #fff;
+        color: $dark;
         padding: 0 8px 0 8px;
         .logo{
             margin: 0;
             font-size: 1.1em;
         }
         .input {  
-            width: 48%;
+            width: 64%;
             height: 64%;
             display: flex;
             align-items: center;
@@ -26,9 +26,11 @@ header {
                 outline: none;
                 font-size: 14px;
                 padding-left: 10px;
+                background-color: $dark;
+                color: $primary-color;
             }
             button {
-                background-color: #fff;
+                background-color: $dark;
                 border: none;
                 height: 100%;
                 width: 8%;
@@ -60,7 +62,7 @@ header {
                     }
                     a {
                        text-decoration: none;  
-                       color: #fff;
+                       color: $dark;
                        
                    }
                }
@@ -84,19 +86,19 @@ header {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                background-color: #fff;
-                color: #000;
+                background-color: $primary-color;
+                color: $dark;
                 margin-top: 110px;
                 border:1px solid #ccc;
                 padding: 8px;
                 border-radius: 8px;
                 li {
-                    border-bottom: 1px solid #ccc;
+                    border-bottom: 1px solid $primary-color;
                     padding: 3px;
                     width: 120px;
                     a {
                         text-decoration: none;
-                        color: #000;
+                        color: $dark;
                         :hover {
                             font-weight: bold;
                         }
@@ -105,6 +107,14 @@ header {
             }
         }
     }
+}
+
+#vantagens {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
 }
 
 @media (max-width: 3000px) {

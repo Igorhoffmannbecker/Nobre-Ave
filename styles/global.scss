@@ -1,5 +1,7 @@
 @import "variants.scss"; 
 @import "index.scss";
+@import "slider.scss";
+@import "advantage.scss";
 body {
     margin: 0;
     padding: 0;
@@ -7,4 +9,5 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%;
+    background-color: $background-color;
 }
