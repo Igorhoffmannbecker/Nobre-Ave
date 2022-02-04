@@ -24,6 +24,7 @@
     }
     .imagens {
         height: 100%;
+        width: 100%;
         overflow: hidden;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
@@ -46,4 +47,15 @@
 
 .moldura .hidden {
     display: none;
+}
+
+@media (max-width: 767px) {
+    .moldura {
+        height: 216px;
+    }
+} 
+@media (max-width: 576px) {
+    .moldura {
+        height: 172px;
+    }
 }

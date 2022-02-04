@@ -1,8 +1,8 @@
-import {useRef, useState} from 'react'
+import {useRef, useState, useEffect} from 'react'
 
-export default function Slider() {
+export default function Slider({banners}) {
     const slider = useRef(null);
-    slider.current && setInterval(slider.current.scrollLeft += slider.current.offsetWidth, 20000) 
+    slider.cuurrent && setTimeout(setInterval(slider.current.scrollLeft += slider.current.offsetWidth, 1000),1000)
     const [sliderButtonIsHidden, setSliderButtonIsHidden] = useState(true)
     return (
       <>
@@ -33,54 +33,19 @@ export default function Slider() {
             className="imagens"
             ref={slider}
           >
-              <div className="img" >
-                <img
-                  src="/imgs/1.jpeg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
-              <div className="img" >
-                <img
-                  src="/imgs/patagonia.jpg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
-              <div className="img" >
-                <img
-                  src="/imgs/artic.jpg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
-              <div className="img" >
-                <img
-                  src="/imgs/lake.jpg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
-              <div className="img" >
-                <img
-                  src="/imgs/minimalista.jpg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
-              <div className="img">
-                <img
-                  src="/imgs/mountain-lake.jpg"
-                  alt="imagem de caminhão"
-                  w="100%"
-                  h="100%"
-                />
-              </div>
+              {banners.map(banner => {
+                return (
+                  <div className="img" key={banner.id}>
+                    <img
+                      src={banner.img.url}
+                      alt="imagem de caminhão"
+                      w="100%"
+                      h="100%"
+                    />
+                </div>
+                )
+              })}
+              
           </div>
         </div>
         </>

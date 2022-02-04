@@ -115,6 +115,63 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 56px;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+
+#products {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 8px;
+    h1 {
+        font-size: 2.0em;
+        color: $dark;
+        margin-bottom: 16px;
+    }
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+#sobreNos {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 64px;
+    display: flex;
+    gap: 16px;
+    padding: 0 8px;
+    div {
+        width: 50%;
+    }
+    .imagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 480px;
+        background-color: #000;
+        color: white;
+    }
+    .text {
+        h1 {
+            font-size: 2.0em;
+            color: $dark;
+            margin-top: 0px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $dark;
+    height: 320px;
+    margin-top: 64px;
 }
 
 @media (max-width: 3000px) {
@@ -129,5 +186,23 @@ header {
         .toggle {
             display: block;   
         }   
+        #vantagens {
+            display: none;
+            visibility: hidden;
+        }
+        #sobreNos {
+            .imagem {
+                display: none;
+                visibility: hidden;
+            }
+            .text {
+                width: 100%;
+            }
+        }
+}
+
+
+::placeholder {
+    color: #fff;
 }
 
