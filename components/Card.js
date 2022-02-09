@@ -1,4 +1,4 @@
-export default function Card({title, description, img, price, id}) {
+export default function Card({title, img, price, id}) {
     return (
         <>
         <div className="card">
