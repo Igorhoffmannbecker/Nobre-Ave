@@ -28,7 +28,7 @@ export default function Home({banners, produtos}) {
          <Slider banners={banners}/>
       </section>
       <section className="initialText">
-          <h1><strong>Compre ovos de codorna com alta eclosão</strong></h1>
+          <h1><strong>Compre Cvos de Codorna com Alta Fertilidade</strong></h1>
           <p>Durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
              genética fosse única e conseguindo assim, ótimas aves.
