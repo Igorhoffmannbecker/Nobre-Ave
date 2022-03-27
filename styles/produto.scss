@@ -1,0 +1,215 @@
+#information {
+    display: flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 76px;
+    overflow-x: hidden;
+    main {
+        width: 70%;
+        table { 
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            div {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            tbody {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .gray {
+                background-color: #ccc;
+            }
+            tr {
+                border-bottom: 1px solid #ccc;
+                display: flex; 
+                align-content: center; 
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+                height: auto;
+                width: 100%;
+                height: 100%;
+                th {
+                    border-right: 1px solid #ccc;
+                    padding: 5px;
+                    width: 200px;
+                    display: flex;
+                    align-content: center;
+                    text-align: start;
+                    padding: 8px;
+                }
+                tb {
+                    padding: 8px;
+                    width: 60%;
+                }
+            }
+        }
+    }
+    aside {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px; 
+        .content {
+        height: auto;
+        max-width: 300px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        position: fixed;
+        padding: 8px;
+        width: 100%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+        span {
+            font-size: 1.5em;
+            margin-top: 8px;
+        }
+        .buy {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            button {
+                border: 0; 
+                height: 40px;
+                color:#fff;
+                font-weight: 700;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                }
+            }
+            .whatsapp {
+                background-color: $whatsapp;
+                a  {
+                    color: #fff;
+                }
+            }
+            .mercado-livre {  
+                background-color: #fee800;
+                margin-top: 8px;
+                a {
+                    color: #113075;
+                }
+            }
+        }
+        .quantity {
+            font-weight: 600;
+            margin-top: 24px;
+            input {
+                width: 36px;
+                height: 20px;
+            }
+        }
+        
+    }
+}
+
+.mobile-info {
+    display: none; 
+    visibility: hidden;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 8px;
+    .content {
+    width: 100%;
+    }
+    h1 {
+        margin: 0;
+        font-size: 1.8em;
+    }
+    span {
+        font-size: 1.6em;
+        width: 60px;
+    }
+    .buy {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        button {
+            border: 0; 
+            height: 40px;
+            color:#fff;
+            font-weight: 700;
+            border-radius: 5px;
+            display: flex;
+            width: 50%;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+        .whatsapp {
+            background-color: $whatsapp;
+        }
+        .mercado-livre {
+            background-color: #fee800;
+            a {
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    .middle {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 16px;
+    }
+    .quantity {
+        font-weight: 600;
+        margin-left: 16px;
+        input {
+            width: 36px;
+            height: 20px;
+        }
+    }  
+    h2 {
+        font-size: 1.75em;
+    }  
+}
+
+.info {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 800px) {
+    .mobile-info {
+        display: flex; 
+        visibility: visible;
+    }
+    .info {
+        margin-bottom: 16px;
+        padding: 0 8px 0 8px;
+    }
+    #information {
+        margin-top: 56px;
+    }
+    #information aside {
+        display: none;
+        visibility: hidden;
+        width: 0px;
+    }
+    #information main {
+        width: 100%;
+    }
+}

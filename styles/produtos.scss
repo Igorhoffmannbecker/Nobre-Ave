@@ -4,13 +4,36 @@
     flex-wrap: wrap;
     max-width: 1080px;
     margin: 0 auto; 
-    margin-top: 24px;
     padding: 0 8px;
+    margin-bottom: 24px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 56px;
+    align-items: center;
+    select {
+        border: none;
+        background: transparent;
+        padding: 8px;
+        font-size: 16px;
+        option {
+            padding: 8px;
+            border: none;
+        }
+        :focus {
+            border: none;
+        }
+    }
 }
 
 @media (max-width: 580px) {
     #produtos {
-        margin-top: 0px;
+        margin-top: 56px;
         gap: 0;
         padding: 0px;
     }

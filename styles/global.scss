@@ -1,10 +1,14 @@
 @import "variants.scss"; 
-@import "index.scss";
 @import "slider.scss";
 @import "advantage.scss";
 @import "card.scss";
 @import "produtos.scss";
 @import "whatsappButton.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "index.scss";
+@import "produto.scss";
+
 body {
     margin: 0;
     padding: 0;
@@ -13,4 +17,5 @@ body {
     height: 100%;
     width: 100%;
     background-color: $background-color;
+    box-sizing: border-box;
 }

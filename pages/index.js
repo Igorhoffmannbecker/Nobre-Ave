@@ -1,17 +1,15 @@
 import Link from 'next/link'
-import {useState} from "react"
 import Advantage from '../components/Advantage.js'
 import Slider from "../components/Slider.js"
 import getAllBanners from "../lib/getAllBanners"
 import Card from "../components/Card.js"
 import getAllProducts from '../lib/getAllProducts.js'
-import Image from "next/image"
 import Header from "../components/Header"
 import Footer from '../components/Footer.js'
 import WhatsappButton from '../components/WhatsappButton.js'
 
-
 export default function Home({banners, produtos}) {
+  console.log(banners)
   return (
     <>
     <Header />
@@ -20,12 +18,12 @@ export default function Home({banners, produtos}) {
          <Slider banners={banners}/>
       </section>
       <section className="initialText">
-          <h1>Compre ovos de codorna<br/> com alta eclosão</h1>
+          <h1><strong>Compre ovos de codorna com alta eclosão</strong></h1>
           <p>Durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
              genética fosse única e conseguindo assim, ótimas aves.
           </p>
-          <button>Produtos</button>
+          <button><Link href="/produtos">Produtos</Link></button>
       </section>
       <section id="vantagens">
         <Advantage title="Entrega Rápida" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in semper dolor">
@@ -43,22 +41,20 @@ export default function Home({banners, produtos}) {
          <div className="caixa" id="caixaHome">
            {produtos.slice(0,3).map(produto => {
              return (<>
-              <Card title={produto.titulo} description={produto.descricao} price={produto.preco} id={produto.id} img={produto.imagens[0].url}/>
+              <Card title={produto.titulo} description={produto.descricao} price={produto.preco} direct={produto.id} img={produto.imagens[0].url}/>
              </>)
            })}
          </div>
       </section>
       <section id="sobreNos">
            <div className="imagem">
-             imagem de codornas ou ovos bonita
+             <img src="/imgs/codorna-home.webp" />
            </div>
            <div className="text">
              <h1>Sobre Nós</h1>
-             <p>
-               <p>Texto de 2 parágrafos para falar sobre o negócio</p>
-               <p>Vestibulum sodales placerat nisi ac viverra. Sed venenatis rhoncus sem, at rhoncus ipsum fermentum at. Curabitur vulputate ex eu eros tristique, vitae finibus risus rhoncus. Quisque in dictum nisi. Vivamus lorem lacus, consequat quis lectus non, convallis pellentesque urna. Donec dignissim justo erat, at elementum velit ullamcorper non.</p>
-               <p>Urabitur nec mauris suscipit, posuere odio sit amet, viverra felis. Nullam nec convallis nulla. Proin imperdiet dignissim metus sit amet hendrerit. In eget tempus massa. Suspendisse non placerat nibh. Aliquam posuere malesuada fermentum. Aenean at congue est</p>
-             </p>
+             <p>Somos uma empresa de venda de ovos de codorna, localizada em Cerro Largo RS.</p>
+             <p>Durante mais de 2 anos trabalhamos no cruzamento de genética de todas as regiões, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves, com bom desempenho tanto de peso, como de postura.</p> 
+             <p>Trabalhamos com 2 Fêmeas por Macho, as aves são novas (MÁXIMO 08 MESES), os machos são substituídos a cada 5 meses.</p>
            </div>
       </section>
     </main>

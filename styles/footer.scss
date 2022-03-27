@@ -1,0 +1,21 @@
+footer {
+    background-color: $dark;
+    padding: 8px;
+    color: #fff;
+    div {
+        max-width: 1080px;
+        padding-bottom: 32px;
+        padding-top: 32px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        li {
+            list-style: none;
+             a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }            
+}    

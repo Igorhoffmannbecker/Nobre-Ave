@@ -1,235 +1,106 @@
-header {
-    background-color: $primary-color;
-    menu{
+main {
+    #vantagens {
         max-width: 1080px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        height: 56px;
-        align-items: center;
-        color: $dark;
-        padding: 0 8px 0 8px;
-        .logo{
-            margin: 0;
-            font-size: 1.1em;
-        }
-        .input {  
-            width: 64%;
-            height: 64%;
-            display: flex;
-            align-items: center;
-            input {
-                width: 92%;
-                height: 100%;
-                border-radius: 24px 0 0 24px;
-                border: none;
-                outline: none;
-                font-size: 14px;
-                padding-left: 10px;
-                background-color: $dark;
-                color: $primary-color;
-            }
-            button {
-                background-color: $dark;
-                border: none;
-                height: 100%;
-                width: 8%;
-                border-radius: 0 24px 24px 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-            }
-            /* clears the 'X' from Chrome */
-            input::-webkit-search-decoration,
-            input::-webkit-search-cancel-button,
-            input::-webkit-search-results-button,
-            input::-webkit-search-results-decoration { display: none; }  
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            .links {
-               display: flex;
-               align-items: center;
-               list-style: none;
-               gap: 16px;
-               margin: 0;
-               padding: 0;
-               li {
-                    :hover {
-                       font-weight: bold;
-                    }
-                    a {
-                       text-decoration: none;  
-                       color: $dark;
-                       
-                   }
-               }
-            }
-            button {
-                background-color: transparent; 
-                border: none;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-            }
-            ul.toggle-links {
-                position: fixed;
-                right: 10px;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                background-color: $primary-color;
-                color: $dark;
-                margin-top: 110px;
-                border:1px solid #ccc;
-                padding: 8px;
-                border-radius: 8px;
-                li {
-                    border-bottom: 1px solid $primary-color;
-                    padding: 3px;
-                    width: 120px;
-                    a {
-                        text-decoration: none;
-                        color: $dark;
-                        :hover {
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-#vantagens {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 56px;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-}
-
-
-#productsHome {
-    max-width: 1080px;
-    margin: 0 auto;
-    h1 {
-        font-size: 2.0em;
-        color: $dark;
-        margin-bottom: 16px;
-        padding: 0 8px;
-    }
-    .caixa {
-        display: flex;
+        margin-top: 56px;
         flex-wrap: wrap;
-        gap: 10px;
-        padding: 0 8px;
-    }
-}
-
-#sobreNos {
-    max-width: 1080px;
-    margin: 0 auto;
-    margin-top: 64px;
-    display: flex;
-    gap: 16px;
-    padding: 0 8px;
-    margin-bottom: 64px;
-    div {
-        width: 50%;
-    }
-    .imagem {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        height: 480px;
-        background-color: #000;
-        color: white;
+       
     }
-    .text {
+    
+    #productsHome {
+        max-width: 1080px;
+        margin: 0 auto;
         h1 {
-            font-size: 2.0em;
+            font-size: 1.75em;
             color: $dark;
-            margin-top: 0px;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        .caixa {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0 8px;
         }
     }
-}
-
-footer {
-    background-color: $dark;
-    padding: 8px;
-    color: #fff;
-    div {
+    
+    #sobreNos {
         max-width: 1080px;
-        padding-bottom: 32px;
-        padding-top: 32px;
         margin: 0 auto;
+        margin-top: 64px;
         display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-            li {
-                list-style: none;
-                a {
-                    text-decoration: none;
-                    color: $primary-color;
-                }
+        gap: 16px;
+        padding: 0 8px;
+        margin-bottom: 64px;
+        div {
+            width: 50%;
+        }
+        .imagem {
+            display: flex;
+            align-items: left;
+            justify-content: center;
+            height: 480px;
+            width: 480px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-        }  
-        
+        }
+        .text {
+            h1 {
+                font-size: 2.0em;
+                color: $dark;
+                margin-top: 0px;
+            }
+        }
+    }
+    
+    .initialText {
+        padding: 0 8px;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+        display: none;
+        visibility: hidden;
+        margin-top: 56px;
+        h1 {
+            color: #000;
+            line-height: 1.3em;
+            font-weight: 800;
+            margin: 0;
+            font-size: 30px;
+        }
+        p {
+            font-size: 0.85em;
+            line-height: 1.3;
+        }
+        button {
+            color: #fff;
+            background-color: $dark;
+            border-radius: 8px;
+            width: 100px;
+            padding: 12px;
+            border: none;
+            font-weight: bold;
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+
+    .slider {
+        margin-top: 56px;
+    }
 }
 
-.initialText {
-    padding: 0 8px;
-    flex-direction: column;
-    justify-content: center;
-    height: 300px;
-    display: none;
-    visibility: hidden;
-    h1 {
-        color: #000;
-        line-height: 1.3em;
-        font-weight: 600;
-        margin: 0;
-        font-size: 30px;
-    }
-    p {
-        font-size: 0.85em;
-        line-height: 1.3;
-    }
-    button {
-        color: #fff;
-        background-color: $dark;
-        border-radius: 8px;
-        width: 100px;
-        padding: 12px;
-        border: none;
-        font-weight: bold;
-    }
-}
 
-@media (max-width: 3000px) {
-    .toggle {
-        display: none;   
-    }
-}
 @media (max-width: 589px) {
-        #links-menu {
-            display: none;
-        } 
-        .toggle {
-            display: block;   
-        }   
+    main {
         #vantagens {
             display: none;
             visibility: hidden;
@@ -242,7 +113,7 @@ footer {
             .text {
                 width: 100%;
             }
-        }
+            }
         #productsHome #caixaHome {
             gap: 0;
             padding: 0px;
@@ -255,7 +126,9 @@ footer {
             display: flex;
             visibility: visible; 
         }
+    }
 }
+    
 
 
 ::placeholder {
