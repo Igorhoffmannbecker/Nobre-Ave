@@ -120,5 +120,8 @@ header {
     .toggle {
         display: flex;   
         visibility: visible;
-     }  
+    }
+    header {
+        max-width: 589px;
+    }  
 }     
