@@ -5,6 +5,7 @@ import getAllProducts from "../../lib/getAllProducts";
 import {useState, useContext, useEffect} from "react";
 import InputValueContext from "../../contexts/InputValueContext"
 import Fuse from "fuse.js"
+import Head from "next/head"
 
 export default function Produtos({produtos}) {
     const [data, setData] = useState(produtos)
@@ -75,6 +76,15 @@ export default function Produtos({produtos}) {
     }
     return (
         <>
+        <Head>
+        <title>Veja nossa opções - Nobre Ave - Compre ovos de codorna</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Compre ovos de codorna aqui, durante mais de 2 anos trabalhamos no cruzamento 
+            de genética de todas as raças, fazendo que nossa
+             genética fosse única e conseguindo assim, ótimas aves." 
+        />
+        <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, fertilidade"></meta>
+      </Head>
         <Header productsPage />
         <div className="options">
             <select value={order} onChange={(e) => {

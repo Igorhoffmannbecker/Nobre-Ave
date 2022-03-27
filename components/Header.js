@@ -9,7 +9,6 @@ export default function Header({productsPage}) {
     const Router = useRouter();
     function handldeInputSubmit(e) {
       if (productsPage = undefined) {
-        console.log("não é produtos page");
         e.preventDefault()
         Router.push("/produtos")
       }
@@ -41,6 +40,7 @@ export default function Header({productsPage}) {
             <ul className="toggle-links">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/">Sobre Nós</Link></li>
+              <li><Link href="/produtos">Produtos</Link></li>
             </ul>
           )}
         </nav>

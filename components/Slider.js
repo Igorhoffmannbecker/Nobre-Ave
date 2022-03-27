@@ -14,7 +14,6 @@ export default function Slider({banners, produto = false}) {
               onClick={(e) => {
                 e.preventDefault();
                 slider.current.scrollLeft -= slider.current.offsetWidth;
-                console.log('opa')
               }}
             >
             	&lt;

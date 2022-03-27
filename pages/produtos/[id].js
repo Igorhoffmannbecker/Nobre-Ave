@@ -6,12 +6,22 @@ import getAllProducts from "../../lib/getAllProducts"
 import {useState} from "react"
 import Footer from "../../components/Footer"
 import { useRouter } from "next/router"
+import Head from "next/head"
 export default function Produto({produto}) {
     const [data, setData] = useState(produto.allProdutos[0])
     const Router = useRouter(); 
     const [quantity, setQuantity] = useState(1)
     return (
         <>
+            <Head>
+                <title>Compre {data.quantidade} Ovos de {data.animal ? (data.animal) : "Codorna"} {data.racas} - Nobre Ave</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta name="description" content={`Compre ovos de codorna ${data.racas} com alta fertilidade e baixo preço, durante mais de 2 anos trabalhamos no cruzamento 
+                    de genética de todas as raças, fazendo que nossa
+                    genética fosse única e conseguindo assim, ótimas aves.`}
+                />
+                <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, fertilidade"></meta>
+            </Head>
             <Header />
             <div id="information">
                 <main className="">
