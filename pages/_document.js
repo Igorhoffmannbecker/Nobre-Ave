@@ -2,6 +2,13 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
   render() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date());
+
+    gtag("config", "G-MTB3BGJQCG");
     return (
       <Html>
         <Head>
@@ -16,7 +23,7 @@ class MyDocument extends Document {
         }
         gtag('js', new Date());
 
-        gtag('config', 'G-MTB3BGJQCG');
+        gtag("config", "G-MTB3BGJQCG");
       </script>
         </Head>
         <body>
