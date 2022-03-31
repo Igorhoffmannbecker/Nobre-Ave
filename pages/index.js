@@ -16,11 +16,12 @@ export default function Home({banners, produtos}) {
     <Head>
         <title>Nobre Ave - Compre Ovos de Codorna Férteis.</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Compre ovos de codorna aqui, durante mais de 2 anos trabalhamos no cruzamento 
-            de genética de todas as raças, fazendo que nossa
-             genética fosse única e conseguindo assim, ótimas aves." 
+        <meta name="description" content="Comprar ovos de codorna, 
+        ovos de codorna férteis, 
+        ovos galados de godornas gigantes, 
+        ovos férteis de codornas gigantes" 
         />
-        <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, fertilidade"></meta>
+        <meta name="keywords" content="ovos de codorna, ovos fertéis, galados, codornas gigantes, comprar, nobreave, codorna, fertilidade"></meta>
     </Head>
     <Header />
     <main>
@@ -28,7 +29,7 @@ export default function Home({banners, produtos}) {
          <Slider banners={banners}/>
       </section>
       <section className="initialText">
-          <h1><strong>Compre Ovos de Codorna com Alta Fertilidade</strong></h1>
+          <h1><strong>Compre Ovos de Codorna com Fárteis</strong></h1>
           <p>Durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
              genética fosse única e conseguindo assim, ótimas aves.

@@ -79,9 +79,7 @@ export default function Produtos({produtos}) {
         <Head>
         <title>Veja nossa opções - Nobre Ave - Compre ovos de codorna</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Compre ovos de codorna aqui, durante mais de 2 anos trabalhamos no cruzamento 
-            de genética de todas as raças, fazendo que nossa
-             genética fosse única e conseguindo assim, ótimas aves." 
+        <meta name="description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de godornas gigantes, ovos férteis de codornas gigantes" 
         />
         <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, fertilidade"></meta>
       </Head>
