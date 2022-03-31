@@ -99,6 +99,7 @@
                 background-color: $whatsapp;
                 a  {
                     color: #fff;
+                    text-decoration: none;
                 }
             }
             .mercado-livre {  
@@ -136,7 +137,6 @@
     }
     span {
         font-size: 1.6em;
-        width: 60px;
     }
     .buy {
         margin-top: 32px;
@@ -155,18 +155,23 @@
             gap: 5px;
             align-items: center;
             justify-content: center;
-        }
-        .whatsapp {
-            background-color: $whatsapp;
-        }
-        .mercado-livre {
-            background-color: #fee800;
             a {
                 text-decoration: none;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                gap: 5px;
             }
+        }
+        .whatsapp {
+            background-color: $whatsapp;
+            a {
+                color: #fff;
+            }
+        }
+        .mercado-livre {
+            background-color: #fee800;
+            
         }
     }
     .middle {
