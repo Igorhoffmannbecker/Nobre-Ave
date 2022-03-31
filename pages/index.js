@@ -14,7 +14,7 @@ export default function Home({banners, produtos}) {
   return (
     <>
     <Head>
-        <title>Nobre Ave - Compre ovos de codorna</title>
+        <title>Nobre Ave - Compre Ovos de Codorna Férteis.</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Compre ovos de codorna aqui, durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
