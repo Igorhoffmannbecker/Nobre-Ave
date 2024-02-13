@@ -6,6 +6,7 @@ import * as gtag from "../lib/gtag.js"
 import WhatsappButton from '../components/WhatsappButton.js'
 import Header from '../components/Header.js'
 import Footer from '../components/Footer.js'
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
       <Footer/>
       <WhatsappButton />
       <gtag.Analytics />
+      <Analytics />
     </InputValueProvider>
   )
 }
