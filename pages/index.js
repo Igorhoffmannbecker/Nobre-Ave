@@ -51,7 +51,7 @@ export default function Home({banners, produtos}) {
       <section id="productsHome">
          <h1>Produtos</h1>
          <div className="caixa" id="caixaHome">
-           {produtos.slice(0,3).map(produto => {
+           {produtos.slice(0,4).map(produto => {
              return (<>
               <Card title={produto.titulo} description={produto.descricao} price={produto.preco} direct={produto.slug} img={produto.imagem[0]}/>
              </>)

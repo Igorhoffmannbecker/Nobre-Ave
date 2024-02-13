@@ -121,7 +121,7 @@ export default function Produtos({produtos}) {
                   description={produto.descricao} 
                   price={produto.preco} 
                   direct={produto.slug} 
-                  img={produto.imagem[0]}s
+                  img={produto.imagem[0]}
                   />
                 )
             })) : (<NaoEncontrado/>)}

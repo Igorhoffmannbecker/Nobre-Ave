@@ -2,9 +2,8 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto; 
-    padding: 0 8px;
     margin-bottom: 24px;
 }
 
@@ -12,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     height: 60px;
-    width: 1080px;
+    width: 1200px;
     margin: 0 auto;
     margin-top: 56px;
     align-items: center;
@@ -35,7 +34,7 @@
     #produtos {
         margin-top: 0px;
         gap: 0;
-        padding: 0pc;
+        padding: 0px;
         display: block;
     }
 }
