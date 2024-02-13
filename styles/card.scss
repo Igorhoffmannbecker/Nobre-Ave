@@ -14,7 +14,7 @@
         height: 60%;
         background-color: #000;
         img {
-            height: 100%;
+            object-fit: contain;
         }
     } 
     .informacaos {
@@ -37,6 +37,9 @@
         flex-direction: row;
         height: 160px;
         border-radius: 0;
+        :hover {
+            shadow: 8px;
+        }
         .capa {
             width: 40%;
             height: 85%;

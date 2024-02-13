@@ -8,6 +8,7 @@
 @import "footer.scss";
 @import "index.scss";
 @import "produto.scss";
+@import "naoEncontrado.scss";
 
 body, html {
     margin: 0;
@@ -18,4 +19,12 @@ body, html {
     width: 100vw;
     background-color: $background-color;
     box-sizing: border-box;
+}
+
+main {
+    min-height: 90vh;
+}
+
+img {
+    position: static !important;
 }

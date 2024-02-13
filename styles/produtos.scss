@@ -33,8 +33,9 @@
 
 @media (max-width: 580px) {
     #produtos {
-        margin-top: 56px;
+        margin-top: 0px;
         gap: 0;
-        padding: 0px;
+        padding: 0pc;
+        display: block;
     }
 }

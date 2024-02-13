@@ -1,4 +1,5 @@
 import {useRef, useState, useEffect} from 'react'
+import Image from 'next/image';
 
 export default function Slider({banners, produto = false}) {
     const slider = useRef(null);
@@ -37,18 +38,16 @@ export default function Slider({banners, produto = false}) {
                 return (
                   <div className="img" key={banner.id}>
                     {produto ? (
-                      <img
+                      <Image
                       src={banner.url}
-                      alt="imagem de caminhão"
-                      w="100%"
-                      h="100%"
+                      {...banner}
+                      fill={true}
                       />
                     ) : (
-                      <img
+                      <Image
                       src={banner.img.url}
-                      alt="imagem de caminhão"
-                      w="100%"
-                      h="100%"
+                      {...banner.img}
+                      fill={true}
                       />
                     )} 
                 </div>

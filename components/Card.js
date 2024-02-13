@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 export default function Card({title, img, price, direct}) {
     const Router = useRouter()
@@ -10,7 +11,7 @@ export default function Card({title, img, price, direct}) {
         <>
         <div className="card" onClick={(e) => onClick(e)}>
             <div className="capa">
-                <img src={img} alt="imagem do produto"/>
+                <Image src={img.url} {...img} fill={true}/>
             </div>
             <div className="informacaos">
                 <h3>{title}</h3>

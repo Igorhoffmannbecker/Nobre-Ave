@@ -1,40 +1,41 @@
 import Link from 'next/link'
 import Advantage from '../components/Advantage.js'
 import Slider from "../components/Slider.js"
-import getAllBanners from "../lib/getAllBanners"
+import getAllBanners from "../lib/getAllBanners.js"
 import Card from "../components/Card.js"
 import getAllProducts from '../lib/getAllProducts.js'
-import Header from "../components/Header"
-import Footer from '../components/Footer.js'
-import WhatsappButton from '../components/WhatsappButton.js'
-import Head from "next/head"
+import Head from 'next/head.js'
+import Image from 'next/image.js'
 
 export default function Home({banners, produtos}) {
-  
   return (
     <>
     <Head>
-        <title>Nobre Ave - Compre Ovos de Codorna Férteis.</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Comprar ovos de codorna, 
-        ovos de codorna férteis, 
-        ovos galados de godornas gigantes, 
-        ovos férteis de codornas gigantes" 
-        />
-        <meta name="keywords" content="ovos de codorna, ovos fertéis, galados, codornas gigantes, comprar, nobreave, codorna, fertilidade"></meta>
+      <title>Nobre Ave - Compre Ovos de Codorna Férteis</title>
+      <meta rel='description' content='Somos uma empresa de venda de ovos de codorna, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves.' />
+      <meta name="keywords" content="ovos de codorna, ovos de codorna férteis, ovos galados de godornas gigantes, ovos férteis de codornas gigantes" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="pt-BR" />
+      <meta rel="canonical" href="https://ovosdecodorna.com/" />
+      <meta property="og:title" content="Nobre Ave - Compre Ovos de Codorna Férteis" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://ovosdecodorna.com/produtos" />
+      <meta property="og:image" content="ovosdecodorna.com/imgs/codorna-home.webp" />
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:site_name" content="Nobre Ave" />
+      <meta property="og:description" content="Somos uma empresa de venda de ovos de codorna, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves." />  
     </Head>
-    <Header />
     <main>
       <section className="slider">
          <Slider banners={banners}/>
       </section>
       <section className="initialText">
-          <h1><strong>Compre Ovos de Codorna com Fárteis</strong></h1>
+          <h1><strong>Compre ovos de codorna com férteis</strong></h1>
           <p>Durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
              genética fosse única e conseguindo assim, ótimas aves.
           </p>
-          <button><Link href="/produtos">Produtos</Link></button>
+          <button><Link href="/produtos">Ver Produtos</Link></button>
       </section>
       <section id="vantagens">
         <Advantage title="Entrega Rápida e Segura" text="Produto bem embalado e entregue pelo Sedex.">
@@ -52,14 +53,14 @@ export default function Home({banners, produtos}) {
          <div className="caixa" id="caixaHome">
            {produtos.slice(0,3).map(produto => {
              return (<>
-              <Card title={produto.titulo} description={produto.descricao} price={produto.preco} direct={produto.id} img={produto.imagens[0].url}/>
+              <Card title={produto.titulo} description={produto.descricao} price={produto.preco} direct={produto.slug} img={produto.imagem[0]}/>
              </>)
            })}
          </div>
       </section>
       <section id="sobreNos">
            <div className="imagem">
-             <img src="/imgs/codorna-home.webp" />
+             <Image src="/imgs/codorna-home.webp" fill="true" alt="Codorna"/>
            </div>
            <div className="text">
              <h1>Sobre Nós</h1>
@@ -69,13 +70,11 @@ export default function Home({banners, produtos}) {
            </div>
       </section>
     </main>
-    <Footer />
-    <WhatsappButton />
     </>
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const {allBanners} = await getAllBanners();
   const {allProdutos} = await getAllProducts();
   return {

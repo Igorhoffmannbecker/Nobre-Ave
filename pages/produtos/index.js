@@ -6,27 +6,29 @@ import {useState, useContext, useEffect} from "react";
 import InputValueContext from "../../contexts/InputValueContext"
 import Fuse from "fuse.js"
 import Head from "next/head"
+import NaoEncontrado from "../../components/NaoEncontrado";
 
 export default function Produtos({produtos}) {
     const [data, setData] = useState(produtos)
     const [order, setOrder] = useState("n")
     const {valueInput, setValueInput} = useContext(InputValueContext)
     const fuse = new Fuse(produtos, {
-        keys: ["titulo"]
+        keys: ["titulo", "raca"], 
+        ignoreLocation: true
     })
     function handleFormatData(dados) {
         if (dados.every((objeto) => objeto.item !== undefined)) {
           const newFormat = [];
-          dados.map((caminhao) => newFormat.push(caminhao.item));
+          dados.map((produto) => newFormat.push(produto.item));
           return newFormat;
         }
         return dados;
       }
     useEffect(() => {
         if(valueInput != "") {
-            setData(handleFormatData(fuse.search(valueInput)))
+          setData(handleFormatData(fuse.search(valueInput)))
         } else {
-            setData(produtos)
+          setData(produtos)
         }
     }, [valueInput])
 
@@ -74,16 +76,28 @@ export default function Produtos({produtos}) {
             }
           }
     }
+    
+    const ogImage = data.length !== 0 ? data[0].imagem[0].url : produtos[0].imagem[0].url;
     return (
         <>
         <Head>
-        <title>Veja nossa opções - Nobre Ave - Compre ovos de codorna</title>
+        <title>Veja nossas opções - Nobre Ave - Compre ovos de codorna</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de godornas gigantes, ovos férteis de codornas gigantes" 
-        />
-        <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, fertilidade"></meta>
+        <meta name="description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de codornas gigantes, ovos férteis de codornas gigantes" />
+        <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, alta fertilidade"/>
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="pt-BR" />
+        <meta rel="canonical" href="https://ovosdecodorna.com/produtos" />
+        <meta property="og:title" content="Veja nossas opções - Nobre Ave - Compre ovos de codorna" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ovosdecodorna.com/produtos" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:site_name" content="Nobre Ave" />
+        <meta property="og:description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de codornas gigantes, ovos férteis de codornas gigantes" />
+
       </Head>
-        <Header productsPage />
+        {data.length !== 0 && (
         <div className="options">
             <select value={order} onChange={(e) => {
                 e.preventDefault()
@@ -97,15 +111,22 @@ export default function Produtos({produtos}) {
                 <option value="q-">Menor Quantidade</option>
             </select>
         </div>
+        )}
         
         <main id="produtos">
-            {data && data.map(p => {
+            {data.length !== 0 ? (data.map(produto => {
+                produto.slug = "codorna"
                 return (
-                    <Card title={p.titulo} price={p.preco} img={p.imagens[0].url} direct={p.id} />
+                  <Card 
+                  title={produto.titulo}   
+                  description={produto.descricao} 
+                  price={produto.preco} 
+                  direct={produto.slug} 
+                  img={produto.imagem[0]}s
+                  />
                 )
-            })}
+            })) : (<NaoEncontrado/>)}
         </main>
-        <Footer />
         </>
     )
 }
@@ -117,3 +138,5 @@ export async function getStaticProps(context) {
       revalidate: 60
     }
   }
+
+
