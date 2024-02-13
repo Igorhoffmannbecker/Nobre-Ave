@@ -115,7 +115,6 @@ export default function Produtos({produtos}) {
         
         <main id="produtos">
             {data.length !== 0 ? (data.map(produto => {
-                produto.slug = "codorna"
                 return (
                   <Card 
                   title={produto.titulo}   
