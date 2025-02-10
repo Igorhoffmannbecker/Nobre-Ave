@@ -11,13 +11,13 @@ export default function Home({banners, produtos}) {
   return (
     <>
     <Head>
-      <title>Nobre Ave - Compre Ovos de Codorna Galados</title>
-      <meta rel='description' content='Somos uma empresa de venda de ovos de codorna galados, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves.' />
-      <meta name="keywords" content="ovos de codorna, ovos de codorna galados, ovos galados, ovos de codorna férteis, ovos galados de godornas gigantes, ovos galados de codornas gigantes" />
+      <title>Nobre Ave - Compre Ovos de Codorna Galados/férteis</title>
+      <meta rel='description' content='Somos uma empresa de venda de ovos de codorna galados/férteis, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves.' />
+      <meta name="keywords" content="ovos de codorna, ovos de codorna galados, ovos galados, ovos de codorna férteis, ovos férteis de codorna, ovos galados de godornas gigantes, ovos galados de codornas gigantes" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="pt-BR" />
       <meta rel="canonical" href="https://ovosdecodorna.com/" />
-      <meta property="og:title" content="Nobre Ave - Compre Ovos de Codorna Galados" />
+      <meta property="og:title" content="Nobre Ave - Compre Ovos de Codorna Galados/férteis" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://ovosdecodorna.com/produtos" />
       <meta property="og:image" content="ovosdecodorna.com/imgs/codorna-home.webp" />
@@ -30,7 +30,7 @@ export default function Home({banners, produtos}) {
          <Slider banners={banners}/>
       </section>
       <section className="initialText">
-          <h1><strong>Compre ovos de codorna galados</strong></h1>
+          <h1><strong>Compre ovos de codorna galados/férteis</strong></h1>
           <p>Durante mais de 2 anos trabalhamos no cruzamento 
             de genética de todas as raças, fazendo que nossa
              genética fosse única e conseguindo assim, ótimas aves.
@@ -41,7 +41,7 @@ export default function Home({banners, produtos}) {
         <Advantage title="Entrega Rápida e Segura" text="Produto bem embalado e entregue pelo Sedex.">
           <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24" width="48px" fill="#fffcc6"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9H8.22zM18 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
         </Advantage>
-        <Advantage title="Fertilidade" text="Ovos galados com alta eclosão e com genética exclusiva. ">
+        <Advantage title="Fertilidade" text="Ovos galados/férteis com alta eclosão e com genética exclusiva. ">
           <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="48px" viewBox="0 0 24 24" width="40px" fill="#fffcc6"><g><path d="M0,0h24v24H0V0z" fill="none"/><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/></g></svg>
         </Advantage>
         <Advantage title="Preço Baixo" text="Preços competitivos e ótimo atendimento.">
