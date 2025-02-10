@@ -81,7 +81,7 @@ export default function Produtos({produtos}) {
     return (
         <>
         <Head>
-        <title>Veja nossas opções - Nobre Ave - Compre ovos de codorna</title>
+        <title>Veja nossas opções - Nobre Ave - Compre ovos de codorna galados/férteis</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Somos uma empresa de venda de ovos de codorna galados/férteis, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves." />
         <meta name="keywords" content="ovos de codorna, ovos de codorna galados, ovos galados, ovos de codorna férteis, ovos galados de godornas gigantes, ovos galados de codornas gigantes"/>
