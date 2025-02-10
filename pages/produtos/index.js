@@ -83,8 +83,8 @@ export default function Produtos({produtos}) {
         <Head>
         <title>Veja nossas opções - Nobre Ave - Compre ovos de codorna</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de codornas gigantes, ovos férteis de codornas gigantes" />
-        <meta name="keywords" content="ovos de codorna, comprar, nobreave, codorna, alta fertilidade"/>
+        <meta name="description" content="Somos uma empresa de venda de ovos de codorna galados/férteis, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves." />
+        <meta name="keywords" content="ovos de codorna, ovos de codorna galados, ovos galados, ovos de codorna férteis, ovos galados de godornas gigantes, ovos galados de codornas gigantes"/>
         <meta name="robots" content="index, follow" />
         <meta name="language" content="pt-BR" />
         <meta rel="canonical" href="https://ovosdecodorna.com/produtos" />
@@ -94,7 +94,7 @@ export default function Produtos({produtos}) {
         <meta property="og:image" content={ogImage} />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Nobre Ave" />
-        <meta property="og:description" content="Comprar ovos de codorna, ovos de codorna férteis, ovos galados de codornas gigantes, ovos férteis de codornas gigantes" />
+        <meta property="og:description" content="Somos uma empresa de venda de ovos de codorna galados/férteis, localizada em Cerro Largo RS. Durante mais de 2 anos trabalhamos no cruzamento  de genética de todas as raças, fazendo que nossa genética fosse única e conseguindo assim, ótimas aves." />
 
       </Head>
         {data.length !== 0 && (
